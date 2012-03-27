@@ -1,0 +1,23 @@
+{
+  "check_interval": 2000,
+  "debug": false,
+  "log": {
+    "file": "log/subject.log"
+  },
+  "mysql": [
+    {
+      "database": "spider",
+      "host": "127.0.0.1",
+      "password": "",
+      "port": "3306",
+      "user": "root"
+    }
+  ],
+  "queue_server": {
+    "host": "127.0.0.1",
+    "port": 3000,
+    "queue_path": "queue"
+  },
+  "spider_generate_queue": "article_stock",
+  "spider_monitor_queue": "article_content"
+}
