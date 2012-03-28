@@ -1,16 +1,16 @@
 {
   "check_interval": 2000,
-  "debug": false,
+  "debug": true,
   "log": {
     "file": "log/subject.log"
   },
   "mysql": [
     {
-      "database": "spider",
+      "database": "weibo",
       "host": "127.0.0.1",
-      "password": "",
+      "password": "spider",
       "port": "3306",
-      "user": "root"
+      "user": "spider"
     }
   ],
   "queue_server": {
@@ -19,11 +19,11 @@
     "queue_path": "queue"
   },
   "scws": {
-    "cmd": "/opt/scws/bin/scws",
-    "dict": "/home/jason/workspace/StockRadar/subject/data/stockdict.xdb",
+    "cmd": "/usr/local/scws/bin/scws",
+    "dict": "/opt/stockradar/subject/data/stockdict.xdb",
     "top": 200
   },
-  "subject_generate_queue": "article_stock",
-  "subject_monitor_queue": "article_content",
+  "subject_generate_queue": "article_similar",
+  "subject_monitor_queue": "article_subject",
   "worker_count": 20
 }
