@@ -216,10 +216,10 @@ doLoadKeyWords(function(result) {
 });
 
 var worker = Worker.getWorker();
-var workFlow = new WorkFlow([prepareTask, worker.getTaskDetailFromDB, worker.getTaskDetailFromDB2, worker.segmentTitle, worker.segmentContent, worker.getArticleSubject, worker.save2Database], getCallback, getNewTask, 1);
+var workFlow = new WorkFlow([prepareTask, worker.getTaskDetailFromDB, worker.getTaskDetailFromDB2, worker.segmentTitle, worker.segmentContent, worker.getArticleSubject, worker.save2Database], getCallback, getNewTask, configs.worker_count);
 setInterval(function() {
   var time_stamp = utils.getTimestamp();
-  if (isKeyWordsLoaded && workFlow.getQueueLength() < 1) {
+  if (isKeyWordsLoaded && workFlow.getQueueLength() < configs.worker_count) {
     for (var i = 0; i < 2 - workFlow.getQueueLength(); i++) {
       getNewTask();
     }
