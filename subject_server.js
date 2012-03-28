@@ -220,7 +220,7 @@ var workFlow = new WorkFlow([prepareTask, worker.getTaskDetailFromDB, worker.get
 setInterval(function() {
   var time_stamp = utils.getTimestamp();
   if (isKeyWordsLoaded && workFlow.getQueueLength() < configs.worker_count) {
-    for (var i = 0; i < 2 - workFlow.getQueueLength(); i++) {
+    for (var i = 0; i < configs.worker_count - workFlow.getQueueLength(); i++) {
       getNewTask();
     }
   }
