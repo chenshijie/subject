@@ -25,6 +25,10 @@
 ###Install dependencies
     $cd subject
     $npm install -d
+###Generate dict file
+    $cd subject
+    $cd data
+    $/usr/local/scws/bin/gen-scws-dict -c utf8 -i stock_dict.txt -o stockdict.xdb
 ###Modify configuration file
     $cd etc
     $cp settings.original.json settings.json
