@@ -18,6 +18,12 @@
     "port": 3000,
     "queue_path": "queue"
   },
-  "spider_generate_queue": "article_stock",
-  "spider_monitor_queue": "article_content"
+  "scws": {
+    "cmd": "/opt/scws/bin/scws",
+    "dict": "/home/jason/workspace/StockRadar/subject/data/stockdict.xdb",
+    "top": 200
+  },
+  "subject_generate_queue": "article_stock",
+  "subject_monitor_queue": "article_content",
+  "worker_count": 20
 }
