@@ -49,13 +49,6 @@ var scws_options = {
 
 var segment = SCWSSegment.getSegment(scws_options);
 
-var str = fs.readFileSync('/opt/stockradar/subject/data/article.txt', 'utf8');
-
-var task = {
-  text: str,
-
-};
-
 var table_map = configs.table_map;
 /**
  * 对task进行准备工作
