@@ -167,7 +167,7 @@ var getNewTask = function() {
 
 var isKeyWordsLoaded = false;
 var keyWords = null;
-var mysql = databases['127.0.0.1:3306:weibo'];
+var mysql = databases[configs.load_stock_block_db_key];
 var doLoadKeyWords = function(cb) {
     var async = require('async');
     async.series({

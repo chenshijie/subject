@@ -25,5 +25,6 @@
   },
   "subject_generate_queue": "article_similar",
   "subject_monitor_queue": "article_subject",
-  "worker_count": 20
+  "worker_count": 1,
+  "load_stock_block_db_key": "172.16.39.117:3306:weibo"
 }
